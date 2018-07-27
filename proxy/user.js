@@ -5,7 +5,7 @@ var uuid    = require('node-uuid');
 
 /**
  * 根据用户名列表查找用户列表
- * Callback:
+ * Callback: https://dev-arena-admin.codemao.cn/admins/login
  * - err, 数据库异常
  * - users, 用户列表
  * @param {Array} names 用户名列表

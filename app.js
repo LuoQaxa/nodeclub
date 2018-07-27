@@ -19,8 +19,10 @@ var LoaderConnect = require('loader-connect')
 var express = require('express');
 var session = require('express-session');
 var passport = require('passport');
+
 require('./middlewares/mongoose_log'); // 打印 mongodb 查询日志
 require('./models');
+
 var GitHubStrategy = require('passport-github').Strategy;
 var githubStrategyMiddleware = require('./middlewares/github_strategy');
 var webRouter = require('./web_router');
@@ -36,9 +38,13 @@ var bodyParser = require('body-parser');
 var busboy = require('connect-busboy');
 var errorhandler = require('errorhandler');
 var cors = require('cors');
+
+// 请求中间件 
 var requestLog = require('./middlewares/request_log');
 var renderMiddleware = require('./middlewares/render');
 var logger = require('./common/logger');
+
+// 安全中间件
 var helmet = require('helmet');
 var bytes = require('bytes')
 

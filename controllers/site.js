@@ -98,6 +98,7 @@ exports.index = function (req, res, next) {
   // END 取分页数据
 
   var tabName = renderHelper.tabName(tab);
+
   proxy.all('topics', 'tops', 'no_reply_topics', 'pages',
     function (topics, tops, no_reply_topics, pages) {
       res.render('index', {

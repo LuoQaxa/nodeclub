@@ -72,6 +72,7 @@ exports.getCountByQuery = function (query, callback) {
  */
 exports.getTopicsByQuery = function (query, opt, callback) {
   query.deleted = false;
+  // 这是查询什么呢？
   Topic.find(query, {}, opt, function (err, topics) {
     if (err) {
       return callback(err);
